@@ -224,3 +224,36 @@ button:disabled { cursor: not-allowed; opacity: .42; }
   .relationship-nav { max-height: 115px; }
   .models-dialog-content { padding: 16px; }
 }
+
+/* Visual refresh */
+:root { --accent: #3b6ea8; --radius: 10px; --shadow-sm: 0 1px 2px #20233a0d, 0 2px 6px #20233a0a; --shadow-md: 0 4px 14px #20233a14; }
+body { background: linear-gradient(180deg, #f4f6fb, #eef1f8); }
+.topbar { background: #ffffffe6; backdrop-filter: saturate(1.4) blur(10px); border-bottom-color: #e3e6ef; }
+.brand-mark { background: linear-gradient(135deg, #3b6ea8, #214777); }
+.button { border-radius: var(--radius); transition: background .15s, border-color .15s, box-shadow .15s, transform .15s; }
+.button-primary { background: linear-gradient(180deg, #2c5a90, #214777); box-shadow: var(--shadow-sm); }
+.button-primary:hover { background: linear-gradient(180deg, #25507f, #102c4d); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.button-secondary:hover { box-shadow: var(--shadow-sm); }
+.sidebar { box-shadow: 4px 0 24px #20233a08; border-right-color: #e3e6ef; }
+.tool-group { background: #fafbfe; }
+.text-input, .model-actions select { border-radius: var(--radius); transition: border-color .15s, box-shadow .15s; }
+.text-input:hover, .model-actions select:hover { border-color: #c9d2e0; }
+.attribute-row { border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: border-color .15s, box-shadow .15s; }
+.attribute-row:hover { border-color: #c8d8e8; box-shadow: var(--shadow-md); }
+.relationship-nav-item { transition: background .12s, border-color .12s; }
+.canvas-toolbar { background: #ffffffd9; backdrop-filter: blur(8px); }
+.canvas { background-color: #f6f8fc; background-image: radial-gradient(#d3d9e6 1px, transparent 1px); background-size: 24px 24px; }
+.entity-card { stroke: #cfd6e4; stroke-width: 1.5; filter: drop-shadow(0 6px 12px #20233a12); }
+.entity:hover .entity-card { stroke: var(--accent); }
+.entity-title { font-weight: 700; fill: #1f2540; }
+.attribute-bubble { stroke: #a9b2c6; }
+.relationship-line { stroke: #9fa8bd; }
+.relationship-diamond { stroke: var(--accent); fill: #f7faff; }
+.empty-canvas { border-radius: 18px; backdrop-filter: blur(6px); }
+.canvas-hint { border-radius: 999px; padding: 7px 13px; backdrop-filter: blur(6px); }
+.toast { border-radius: var(--radius); box-shadow: var(--shadow-md); border-left: 3px solid var(--accent); }
+.models-dialog { border-radius: 18px; border: 0; box-shadow: 0 30px 90px #20233a40; }
+.models-dialog[open] { animation: dialog-in .18s ease-out; }
+.model-delete-option { transition: border-color .12s, background .12s; }
+.model-delete-option:hover { background: #fafbfe; }
+@keyframes dialog-in { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
